@@ -3,9 +3,9 @@ package com.cassiopea.inventory_service.repository;
 import com.cassiopea.inventory_service.model.Inventory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
+import java.util.List;
 
 public interface InventoryRepository extends JpaRepository <Inventory , Long >  {
 
-    Optional <Inventory> findBySku(String sku) ;
+    List < Inventory > findBySkuIn(List < String > skus ) ;
 }

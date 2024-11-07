@@ -1,10 +1,14 @@
 package com.cassiopea.inventory_service.service;
 
 
+import com.cassiopea.inventory_service.dto.InventoryResponse;
+import com.cassiopea.inventory_service.mapper.InventoryMapper;
 import com.cassiopea.inventory_service.repository.InventoryRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @Slf4j
@@ -12,11 +16,12 @@ import org.springframework.stereotype.Service;
 public class InventoryService {
 
     private final InventoryRepository inventoryRepository ;
+    private final InventoryMapper inventoryMapper ;
 
-    public String isInStock ( String sku ) {
-        log.info ( String.valueOf ( inventoryRepository.findBySku ( sku ).isPresent()  ) ) ;
-        return inventoryRepository.findBySku(sku).isPresent()
-                ? "Item is present in stock" : "No items available" ;
+    public List <InventoryResponse> getInventoryStocks (List < String > skus ) {
+        return inventoryRepository.findBySkuIn ( skus )
+                .stream()
+                .map ( inventoryMapper::mapToInventoryResponse )
+                .toList () ;
     }
-
 }
