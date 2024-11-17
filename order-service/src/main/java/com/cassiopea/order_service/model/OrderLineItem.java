@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class OrderLineItem {
+public class  OrderLineItem {
 
     @Id
     @GeneratedValue ( strategy = GenerationType.IDENTITY )

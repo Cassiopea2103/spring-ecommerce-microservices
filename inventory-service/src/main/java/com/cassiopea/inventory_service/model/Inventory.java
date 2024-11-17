@@ -8,7 +8,6 @@ import lombok.Data;
 @Table ( name = "inventory_table" )
 @Entity
 public class Inventory {
-
     @Id
     @GeneratedValue ( strategy = GenerationType.IDENTITY )
     private Long id ;

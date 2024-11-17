@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -19,9 +21,23 @@ public class InventoryService {
     private final InventoryMapper inventoryMapper ;
 
     public List <InventoryResponse> getInventoryStocks (List < String > skus ) {
-        return inventoryRepository.findBySkuIn ( skus )
-                .stream()
+
+        // find inventory for skus in database :
+        Map < String , InventoryResponse > inventoryMap = inventoryRepository.findBySkuIn ( skus )
+                .stream ()
                 .map ( inventoryMapper::mapToInventoryResponse )
+                .collect (Collectors.toMap( InventoryResponse::getSku , response -> response ) ) ;
+
+        return skus.stream ()
+                .map (
+                        sku -> inventoryMap.getOrDefault (
+                                sku ,
+                                InventoryResponse.builder ()
+                                        .sku ( sku )
+                                        .isPresent ( false )
+                                        .build ()
+                        )
+                )
                 .toList () ;
     }
 }
