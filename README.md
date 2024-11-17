@@ -12,3 +12,16 @@
 
 ## Architecture
 ===architecture image here===
+
+
+### Key concepts developed :
+1. Services presentation & implementation
+2. Inter-service communication ( Inventory service - order service ) -- put schemas 
+3. Service discovery  -- put schemas
+4. Api gateway -- put schemas
+5. Security 
+6. Circuit breakers 
+7. Distributed tracing 
+8. Event-driven architecture w Kafka 
+9. Docker
+10. Monitoring - Prometheus x Grafana
