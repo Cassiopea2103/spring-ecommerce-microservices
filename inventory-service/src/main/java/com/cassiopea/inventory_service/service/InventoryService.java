@@ -28,7 +28,7 @@ public class InventoryService {
                 .map ( inventoryMapper::mapToInventoryResponse )
                 .collect (Collectors.toMap( InventoryResponse::getSku , response -> response ) ) ;
 
-        return skus.stream ()
+        List <InventoryResponse > responses =  skus.stream ()
                 .map (
                         sku -> inventoryMap.getOrDefault (
                                 sku ,
@@ -39,5 +39,9 @@ public class InventoryService {
                         )
                 )
                 .toList () ;
+
+        log.info( responses.toString());
+
+        return responses ;
     }
 }

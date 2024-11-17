@@ -32,36 +32,43 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.springboot-ecommerce-microservices [clean...].executor&quot;: &quot;Run&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-Database detector&quot;: &quot;Database detector&quot;,
-    &quot;Notification.DoNotAsk-Database detector&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Inventory Service.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.InventoryServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SerigneSaliouWADE/OneDrive - Intouchgroup/Bureau/Space/DEV/JAVA/springboot/projects/springboot-ecommerce-microservices&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.springboot-ecommerce-microservices [clean...].executor": "Run",
+    "Notification.DisplayName-DoNotAsk-Database detector": "Database detector",
+    "Notification.DoNotAsk-Database detector": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.DiscoveryServerApplication.executor": "Run",
+    "Spring Boot.Inventory Service.executor": "Run",
+    "Spring Boot.InventoryServiceApplication.executor": "Run",
+    "Spring Boot.OrderServiceApplication.executor": "Run",
+    "Spring Boot.ProductServiceApplication.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/SerigneSaliouWADE/OneDrive - Intouchgroup/Bureau/Space/DEV/JAVA/springboot/projects/springboot-ecommerce-microservices",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "advanced.settings"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\SerigneSaliouWADE\OneDrive - Intouchgroup\Bureau\Space\DEV\JAVA\springboot\projects\springboot-ecommerce-microservices" />
@@ -85,8 +92,16 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Inventory Service">
-    <configuration name="Inventory Service" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
+    <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="discovery-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cassiopea.DiscoveryServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Inventory Service" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../../../../../../Program Files/Java/jdk-21" />
       <module name="inventory-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cassiopea.inventory_service.InventoryServiceApplication" />
@@ -108,6 +123,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
       <item itemvalue="Spring Boot.Inventory Service" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
       <item itemvalue="Spring Boot.ProductServiceApplication" />

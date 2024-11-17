@@ -23,13 +23,13 @@ public class OrderService {
 
     private final OrderMapper orderMapper ;
     private final OrderRepository orderRepository ;
-    private final WebClient webClient ;
+    private final WebClient.Builder webClientBuilder ;
 
     public String placeOrder ( OrderRequest orderRequest ) {
         // create order item from request dto :
         Order order = orderMapper.mapToOrder(orderRequest);
 
-        String inventoryURL = "http://localhost:8082/api/inventory";
+        String inventoryURL = "http://inventory-service/api/inventory";
 
         List<String> skus = order.getOrderLineItems()
                 .stream()
@@ -37,7 +37,7 @@ public class OrderService {
                 .toList();
 
         // check inventory stock and place order if item available :
-        InventoryResponse[] inventoryItems = webClient.get()
+        InventoryResponse[] inventoryItems = webClientBuilder.build().get()
                 .uri(
                         inventoryURL,
                         uriBuilder -> uriBuilder.queryParam("skus", skus).build()
