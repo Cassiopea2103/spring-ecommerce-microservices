@@ -25,6 +25,10 @@ public class OrderService {
     private final OrderRepository orderRepository ;
     private final WebClient.Builder webClientBuilder ;
 
+    public List < Order > getOrders () {
+        return orderRepository.findAll() ;
+    }
+
     public String placeOrder ( OrderRequest orderRequest ) {
         // create order item from request dto :
         Order order = orderMapper.mapToOrder(orderRequest);
