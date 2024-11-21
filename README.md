@@ -19,7 +19,7 @@
 2. Inter-service communication ( Inventory service - order service ) -- put schemas 
 3. Service discovery  -- put schemas
 4. Api gateway -- put schemas
-5. Security 
+5. Security - Spring Security + Keycloak
 6. Circuit breakers 
 7. Distributed tracing 
 8. Event-driven architecture w Kafka 
