@@ -20,7 +20,11 @@ public class InventoryService {
     private final InventoryRepository inventoryRepository ;
     private final InventoryMapper inventoryMapper ;
 
-    public List <InventoryResponse> getInventoryStocks (List < String > skus ) {
+    public List <InventoryResponse> getInventoryStocks (List < String > skus ) throws InterruptedException {
+
+        log.info ("Waiting to retrieve inventory..." );
+        Thread.sleep ( 10000 ) ;
+        log.info ( "Wait is over..." );
 
         // find inventory for skus in database :
         Map < String , InventoryResponse > inventoryMap = inventoryRepository.findBySkuIn ( skus )
